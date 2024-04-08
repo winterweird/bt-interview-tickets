@@ -49,7 +49,7 @@ Assume you have a model «Ticket». How would you design an endpoint for updatin
 -   Respond appropriately to changes in priority - if the priority escalates, remaining time is reset according to new priority; if it de-escalates, remaining time is extended according to new priority
 -   Notify any applicable people of the change
 
-If there are changes required in the Ticket model, you're free to make those changes or assume they have been made for the purpose of solving this assignment. However, be reasonable: Don't just assume a method called `perform_update` has been defined!
+If there are changes required in the Ticket model or other supporting code, you're free to make those changes or assume they have been made for the purpose of solving this assignment. However, be reasonable: Don't just assume a method called `perform_update` has been defined!
 
 ### Additional questions
 
