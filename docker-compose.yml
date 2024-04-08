@@ -6,6 +6,8 @@ services:
       POSTGRES_PASSWORD: secret
       POSTGRES_DB: tickets
   app:
+    depends_on:
+      - db
     volumes:
       - .:/app:cached
     ports:
@@ -22,6 +24,6 @@ services:
       python /app/manage.py makemigrations app --noinput &&
       python /app/manage.py migrate app &&
       python /app/manage.py collectstatic --no-input --clear &&
-      python /app/manage.py loadddata /app/app/fixtures/local_data.json &&
+      python /app/manage.py loaddata /app/app/fixtures/local_data.json &&
       python /app/manage.py runserver 0.0.0.0:8000
       "
