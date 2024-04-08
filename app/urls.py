@@ -19,6 +19,8 @@ from django.contrib import admin
 from django.urls import path
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
+from app import views
+
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("schema/", SpectacularAPIView.as_view(), name="schema"),
@@ -29,4 +31,6 @@ urlpatterns = [
         ),
         name="swagger-ui",
     ),
+    path("api/tickets/", views.TicketLC.as_view()),
+    path("api/tickets/<int:pk>/", views.TicketU.as_view()),
 ]
