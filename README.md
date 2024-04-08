@@ -49,7 +49,11 @@ Assume you have a model «Ticket». How would you design an endpoint for updatin
 -   Respond appropriately to changes in priority - if the priority escalates, remaining time is reset according to new priority; if it de-escalates, remaining time is extended according to new priority
 -   Notify any applicable people of the change
 
-How would you modify the Ticket model to include info about what causes the ticket to be pending? Possible causes:
+If there are changes required in the Ticket model, you're free to make those changes or assume they have been made for the purpose of solving this assignment. However, be reasonable: Don't just assume a method called `perform_update` has been defined!
+
+### Additional questions
+
+**Q:** How would you modify the Ticket model to include info about what causes the ticket to be pending? Possible causes:
 
 -   Pending change
 -   Pending customer
