@@ -5,6 +5,8 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: secret
       POSTGRES_DB: tickets
+    volumes:
+      - pg-data:/var/lib/postgresql/data
   app:
     depends_on:
       - db
@@ -27,3 +29,6 @@ services:
       python /app/manage.py loaddata /app/app/fixtures/local_data.json &&
       python /app/manage.py runserver 0.0.0.0:8000
       "
+
+volumes:
+  pg-data:
