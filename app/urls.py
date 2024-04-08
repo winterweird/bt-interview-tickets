@@ -32,5 +32,5 @@ urlpatterns = [
         name="swagger-ui",
     ),
     path("api/tickets/", views.TicketLC.as_view()),
-    path("api/tickets/<int:pk>/", views.TicketU.as_view()),
+    # path("api/tickets/<int:pk>/", views.TicketU.as_view()),
 ]
