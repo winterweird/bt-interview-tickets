@@ -1,5 +1,18 @@
 # Bluetree interview case: Tickets
 
+This is a small example project meant to be a simplified version of one of UpStacked's features. It's intended as a jumping-off point for a candidate to show how they would solve a given issue, in order to assess their problem-solving and communication skills. The case is divided in two parts: **Design** (where the candidate is asked open-ended questions about how they would solve a given technical challenge) and **implementation** (where the candidate prototypes an implementation of a small part of the solution).
+
+The goal of this exercise is just to get an idea of the level of the candidate's technical expertise and problem solving ability, as well as their skills with the Python programming language and Django framework. There is no "one correct solution", and the candidate is not expected to necessarily know or solve everything. It's a given that the domain is more unfamiliar to them than the interviewers, but the candidate should be able to stake out a reasonable direction, reason about possible concerns/tradeoffs that might arise, and elaborate on their choices when prompted.
+
+Estimated time: 1h
+
+-   **Introductions:** 5-10m
+-   **Short intro to the product:** 5m
+-   **Problem description and setup:** 5-10m
+-   **Design challenge:** 20m
+-   **Coding challenge:** 20m
+-   **Recap:** 5-10m
+
 ## Starting the server
 
 ```sh
@@ -7,13 +20,17 @@ $ docker compose up -d --build app   # to build and start
 $ docker compose logs -f app         # to see logs
 ```
 
+## Testing
+
+You can test the server using http://localhost:8000/api/ (Swagger/OpenAPI docs), or test a particular endpoint with Spectacular's API inspection UI using http://localhost:8000/api/name_of_endpoint/. It's possible to set up required data in the database by logging in at http://localhost:8000/admin/. The username is `admin` and the password is `secret`.
+
 ## High level feature description
 
 Customers should have the ability to report issues with their network infrastructures using these modes of communication:
 
--   Email
--   Phone call
--   Direct registration via system login
+-   Email (automatically created)
+-   Phone call or email to support (ask an employee to register the issue)
+-   Direct registration via system login (using a "customer user" account)
 
 Employees need to be able to create issues on behalf of customers. Employees should be able to respond to the issues, customer would like to be notified. Employees should be able to track progress on resolving the issues.
 
