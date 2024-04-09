@@ -32,7 +32,7 @@ Customers should have the ability to report issues with their network infrastruc
 -   Phone call or email to support (ask an employee to register the issue)
 -   Direct registration via system login (using a "customer user" account)
 
-Employees need to be able to create issues on behalf of customers. Employees should be able to respond to the issues, customer would like to be notified. Employees should be able to track progress on resolving the issues.
+Employees need to be able to create issues on behalf of customers. Employees should be able to respond to and update the issues (comment, add assignee, change details), customer would like to be notified. Employees should be able to track progress on resolving the issues.
 
 Issues are given a priority, and depending on the priority there’s a set amount of time from issue creation you have to respond to the issue/assign it to someone, and a set amount of time you have to resolve it. Sometimes the issue is blocked by matters outside of your control (e.g. customer must respond), in which case we want to suspend the amount of time we have left for a set period of time.
 
@@ -51,7 +51,7 @@ When viewing an issue, we would like to see the following:
 
 ## Coding assignment
 
-Assume you have a model «Ticket». How would you design an endpoint for updating ticket details? The endpoint should do the following:
+Assume you have a model «Ticket». Implement an endpoint for updating ticket details. The endpoint should do the following:
 
 -   Save the submitted JSON data. Must be able to:
     -   Change assignee
